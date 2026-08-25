@@ -69,13 +69,13 @@ public class TrigonomteryLab {
             System.out.println("Invalid choice.");
         }
         
-        //Critical THinking Questions:
-        //  1. Why do we need to convert angles from degrees to radians?
-        //       We need to convert degrees to radians because Java's Math.sin(), Math.cos(), and Math.tan() use radians when calculating angles.
-        //  2. What makes tangent undefined at certain angles?
-        //       Tangent becomes undefined when the cosine of the angle is zero. This happens at angles like 90° and 270°, because we cannot divide by zero.
-        //  3. How could you modify this program to also calculate reciprocal functions?
-        //      We can add calculations for cosecant, secant, and cotangent using the reciprocals of sine, cosine, and tangent.
+        /*Critical THinking Questions:
+        1. Why do we need to convert angles from degrees to radians?
+            We need to convert degrees to radians because Java's Math.sin(), Math.cos(), and Math.tan() use radians when calculating angles.
+        2. What makes tangent undefined at certain angles?
+            Tangent becomes undefined when the cosine of the angle is zero. This happens at angles like 90° and 270°, because we cannot divide by zero.
+        3. How could you modify this program to also calculate reciprocal functions?
+            We can add calculations for cosecant, secant, and cotangent using the reciprocals of sine, cosine, and tangent. */
         
         
         
@@ -85,8 +85,8 @@ public class TrigonomteryLab {
         System.out.print("Enter an angle in degrees to determine its quadrant and signs:");
         double quadrantAngle = input.nextDouble();
         
-        // An angle can be larger than 360° or negative. 
-        // We use the remainder after dividing by 360 to normalize the angle between 0° and 360°.
+        /* An angle can be larger than 360° or negative. 
+           We use the remainder after dividing by 360 to normalize the angle between 0° and 360°. */
         double hello = quadrantAngle % 360;
         
         // If the "a" angle is negative, add 360° to make it positive.
@@ -161,13 +161,13 @@ public class TrigonomteryLab {
             System.out.println("Tangent: Negative");
         }
                     
-        //Critical Thinking Questions:
-        //  1. Why is it important to normalize angles before determining their quadrant?
-        //      It is important because an angle can be bigger than 360° or negative. Normalizing it changes the angle to a value between 0° and 360°, making it easier to find its quadrant.
-        //  2. How does the sign of trigonometric functions change across different quadrants?
-        //      The signs change depending on the quadrant. Some functions are positive while others are negative. For example, sine is positive in the first two quadrants but negative in the last two.
-        //  3. What special considerations are needed for angles exactly on the axes?
-        //      Angles like 0°, 90°, 180°, and 270° are on the axes, so they do not belong to a quadrant. We need to handle them separately.
+        /*Critical Thinking Questions:
+        1. Why is it important to normalize angles before determining their quadrant?
+            It is important because an angle can be bigger than 360° or negative. Normalizing it changes the angle to a value between 0° and 360°, making it easier to find its quadrant.
+        2. How does the sign of trigonometric functions change across different quadrants?
+            The signs change depending on the quadrant. Some functions are positive while others are negative. For example, sine is positive in the first two quadrants but negative in the last two.
+        3. What special considerations are needed for angles exactly on the axes?
+            Angles like 0°, 90°, 180°, and 270° are on the axes, so they do not belong to a quadrant. We need to handle them separately. */
         
         
         
@@ -257,13 +257,13 @@ public class TrigonomteryLab {
 
             } else {
 
-                // Pythagorean theorem: a² + b² = c²
-                // Therefore: b = √(c² - a²)
+                /* Pythagorean theorem: a² + b² = c²
+                   Therefore: b = √(c² - a²) */
                 b = sqrt((c * c) - (a * a));
 
-                // sin(A) = opposite / hypotenuse
-                // sin(A) = a / c
-                // Therefore: A = sin⁻¹(a / c)
+                /* sin(A) = opposite / hypotenuse
+                   sin(A) = a / c
+                   Therefore: A = sin⁻¹(a / c) */
                 angleA = toDegrees(asin(a / c));
 
                 // The two acute angles add up to 90°.
@@ -338,13 +338,13 @@ public class TrigonomteryLab {
             System.out.println("Invalid choice.");
         }
                
-        //Critical Thinking Questions:
-        //  1. Why must we validate that angles in a right triangle are less than 90°?
-        //      Because the other two angles of a right triangle must be less than 90°. If an angle is 90° or more, it would not be a valid right triangle.
-        //  2. How does your program handle the different cases of known values?
-        //      The program asks what values are already known, then uses the correct formula to find the missing sides or angles.
-        //  3. What would happen if a user entered values that don't form a valid right triangle?
-        //      The program should tell the user that the values are invalid and ask them to enter correct values.
+        /*Critical Thinking Questions:
+        1. Why must we validate that angles in a right triangle are less than 90°?
+            Because the other two angles of a right triangle must be less than 90°. If an angle is 90° or more, it would not be a valid right triangle.
+        2. How does your program handle the different cases of known values?
+            The program asks what values are already known, then uses the correct formula to find the missing sides or angles.
+        3. What would happen if a user entered values that don't form a valid right triangle?
+            The program should tell the user that the values are invalid and ask them to enter correct values. */
                 
                 
         
@@ -451,13 +451,13 @@ public class TrigonomteryLab {
                 System.out.println("Difference = " + abs(left3 - right3));
                 }
 
-        //Critical Thinking Questions:
-        //1. Why do we need a tolerance when comparing floating-point values?
-        //      We need a tolerance because computers sometimes have very small differences when doing decimal calculations. The values may look slightly different even though they are supposed to be equal.
-        //2. Which identity might be most susceptible to floating-point precision issues and why?
-        //      The identity 1 + tan²θ = sec²θ can have precision issues, especially near angles where tangent becomes very large or undefined.
-        //3. How could you extend this program to verify more complex identities?
-        //      We could add more trigonometric identities to the program and let the user choose which identity they want to check.
+        /*Critical Thinking Questions:
+        1. Why do we need a tolerance when comparing floating-point values?
+            We need a tolerance because computers sometimes have very small differences when doing decimal calculations. The values may look slightly different even though they are supposed to be equal.
+        2. Which identity might be most susceptible to floating-point precision issues and why?
+            The identity 1 + tan²θ = sec²θ can have precision issues, especially near angles where tangent becomes very large or undefined.
+        3. How could you extend this program to verify more complex identities?
+            We could add more trigonometric identities to the program and let the user choose which identity they want to check. */
           
         
             
@@ -490,11 +490,11 @@ public class TrigonomteryLab {
             // Java uses radians for trigonometric functions, so the phase shift is converted from degrees to radians.
             double phaseRadians = toRadians(shift);
 
-            // Wave equation: y = A sin(2πft + φ)
-            // A = amplitude
-            // f = frequency
-            // t = time
-            // φ = phase shift
+            /* Wave equation: y = A sin(2πft + φ)
+               A = amplitude
+               f = frequency
+               t = time
+               φ = phase shift */
             double value =
                     amplitude *
                     sin((2 * PI * frequency * time)
@@ -560,13 +560,13 @@ public class TrigonomteryLab {
         }    
         
         
-        //Critical Thinking Questions:
-        //  1. How did you determine if the wave is at a peak or trough?
-        //      We can look at the value of the wave. If it reaches its highest value, it is at a peak. If it reaches its lowest value, it is at a trough.
-        //  2. What mathematical approach did you use to find the next peak?
-        //      We can use the wave's period to find when the next peak will happen. The period tells us how long it takes for the wave to repeat.
-        //  3. How would you modify this program to handle non-sinusoidal waves?
-        //      We could add different formulas for other types of waves, such as square waves or triangle waves, and let the user choose the type of wave.
+        /*Critical Thinking Questions:
+        1. How did you determine if the wave is at a peak or trough?
+            We can look at the value of the wave. If it reaches its highest value, it is at a peak. If it reaches its lowest value, it is at a trough.
+        2. What mathematical approach did you use to find the next peak?
+            We can use the wave's period to find when the next peak will happen. The period tells us how long it takes for the wave to repeat.
+        3. How would you modify this program to handle non-sinusoidal waves?
+            We could add different formulas for other types of waves, such as square waves or triangle waves, and let the user choose the type of wave. */
 
 
       scanner.close();    
